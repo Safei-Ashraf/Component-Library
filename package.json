@@ -25,7 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +68,9 @@
     "@testing-library/react": "^12.1.2",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.5",
+    "stylelint": "^14.3.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^24.0.0",
     "tailwindcss": "^3.0.18",
     "webpack": "^5.68.0"
   }
