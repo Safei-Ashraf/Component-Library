@@ -1,4 +1,8 @@
 import "../src/styles/tailwind.css";
+import { addDecorator } from "@storybook/react";
+import Center from "../src/stories/components/Center/Center";
+
+addDecorator((Story) => <Center>{Story()}</Center>);
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
