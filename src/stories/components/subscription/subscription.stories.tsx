@@ -14,7 +14,7 @@ export const PrimarySubscription = () => {
   return (
     <>
       <Large size="medium" placeHolder="medium" />
-      <PrimaryA varient="primary" children="Button" />
+      <PrimaryA varient="primary" children="Button" disable />
     </>
   );
 };

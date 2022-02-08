@@ -28,16 +28,14 @@
             "react-app",
             "react-app/jest"
         ],
-        "overrides": [
-            {
-                "files": [
-                    "**/*.stories.*"
-                ],
-                "rules": {
-                    "import/no-anonymous-default-export": "off"
-                }
+        "overrides": [{
+            "files": [
+                "**/*.stories.*"
+            ],
+            "rules": {
+                "import/no-anonymous-default-export": "off"
             }
-        ]
+        }]
     },
     "browserslist": {
         "production": [
@@ -53,7 +51,9 @@
     },
     "devDependencies": {
         "@storybook/addon-actions": "^6.4.17",
+        "@storybook/addon-console": "^1.2.3",
         "@storybook/addon-essentials": "^6.4.17",
+        "@storybook/addon-knobs": "^6.4.0",
         "@storybook/addon-links": "^6.4.17",
         "@storybook/addon-postcss": "^2.0.0",
         "@storybook/builder-webpack5": "^6.4.17",

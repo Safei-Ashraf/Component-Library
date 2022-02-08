@@ -1,18 +1,21 @@
 import Button from "./Button";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { text, boolean } from "@storybook/addon-knobs";
 
 export default {
   title: "Form/Button",
   component: Button,
-  // args: {
-  //   children: "Default Btn",
-  // },
+  // default args
+  args: {
+    children: "Button",
+  },
+  // in case controls not working
+  argTypes: {
+    varient: { control: "text" },
+    children: { control: "text" },
+    onClick: { action: "clicked" },
+  },
 } as ComponentMeta<typeof Button>;
-
-// export const Primary = () => <Button varient="primary">Primary</Button>;
-export const Secondary = () => <Button varient="secondary">secondary</Button>;
-export const Success = () => <Button varient="success">success</Button>;
-export const Danger = () => <Button varient="danger">danger</Button>;
 
 // arg in story book
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
@@ -29,10 +32,18 @@ PrimaryA.args = {
 };
 
 SecondaryA.args = {
+  ...PrimaryA.args,
   varient: "secondary",
 };
 
 SuccessA.args = {
-  ...PrimaryA.args,
   varient: "success",
+};
+
+export const knobs = () => {
+  return (
+    <Button varient="danger" disable={boolean("Disable", false)}>
+      {text("Label", "Button Label")}
+    </Button>
+  );
 };

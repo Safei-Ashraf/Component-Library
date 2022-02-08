@@ -1,6 +1,13 @@
 import "../src/styles/tailwind.css";
 import { addDecorator } from "@storybook/react";
 import Center from "../src/stories/components/Center/Center";
+import { withKnobs } from "@storybook/addon-knobs";
+import { withConsole } from "@storybook/addon-console";
+
+// this will provide us where is log statment from
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+// able to add knobs on each component
+addDecorator(withKnobs);
 
 addDecorator((Story) => <Center>{Story()}</Center>);
 

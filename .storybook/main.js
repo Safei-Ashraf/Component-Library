@@ -4,14 +4,24 @@ module.exports = {
     stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
 
     // Add any Storybook addons you want here: https://storybook.js.org/addons/
-    addons: [{
-        name: "@storybook/addon-postcss",
-        options: {
-            postcssLoaderOptions: {
-                implementation: require("postcss"),
+    addons: [
+        "@storybook/addon-knobs",
+        "@storybook/addon-links",
+        {
+            name: "@storybook/addon-essentials",
+            options: {
+                backgrounds: true,
             },
         },
-    }, ],
+        {
+            name: "@storybook/addon-postcss",
+            options: {
+                postcssLoaderOptions: {
+                    implementation: require("postcss"),
+                },
+            },
+        },
+    ],
     core: {
         builder: "webpack5",
     },
