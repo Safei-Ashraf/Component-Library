@@ -6,7 +6,7 @@
 
 ## Checklist before merging
 
--   [ ] Story created.
--   [ ] Tests pass.
--   [ ] I have performed a self-review of my code.
--   [ ] My changes generate no new warnings.
+- [ ] Story created.
+- [ ] Tests pass.
+- [ ] I have performed a self-review of my code.
+- [ ] My changes generate no new warnings.
