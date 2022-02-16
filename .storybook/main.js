@@ -5,7 +5,6 @@ module.exports = {
 
     // Add any Storybook addons you want here: https://storybook.js.org/addons/
     addons: [
-        "@storybook/addon-knobs",
         "@storybook/addon-links",
         {
             name: "@storybook/addon-essentials",

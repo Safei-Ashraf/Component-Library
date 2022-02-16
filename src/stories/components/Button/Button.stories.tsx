@@ -1,6 +1,5 @@
 import Button from "./Button";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { text, boolean } from "@storybook/addon-knobs";
 
 export default {
   title: "Form/Button",
@@ -38,12 +37,4 @@ SecondaryA.args = {
 
 SuccessA.args = {
   varient: "success",
-};
-
-export const knobs = () => {
-  return (
-    <Button varient="danger" disable={boolean("Disable", false)}>
-      {text("Label", "Button Label")}
-    </Button>
-  );
 };
