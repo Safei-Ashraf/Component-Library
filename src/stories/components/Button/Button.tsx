@@ -15,6 +15,7 @@ function Buttons({
 }: ButtonProps) {
   return (
     <button
+      type="button"
       className="bg-primary rounded-lg text-lg "
       onClick={() => console.log("clicked")}
     >
