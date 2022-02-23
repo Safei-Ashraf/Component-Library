@@ -6,6 +6,7 @@ module.exports = {
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
   addons: [
     "@storybook/addon-links",
+
     {
       name: "@storybook/addon-essentials",
       options: {
@@ -16,11 +17,11 @@ module.exports = {
       name: "@storybook/addon-viewport",
     },
     {
-      name: "storybook-tailwind-dark-mode",
-    },
-    {
       name: "@storybook/addon-postcss",
       options: {
+        cssLoaderOptions: {
+          importLoaders: 1,
+        },
         postcssLoaderOptions: {
           implementation: require("postcss"),
         },
@@ -33,4 +34,20 @@ module.exports = {
   reactOptions: {
     fastRefresh: true,
   },
+  // webpackFinal: async (config) => {
+  //   config.module.rules.push({
+  //     test: /\.css$/,
+  //     use: [
+  //       {
+  //         loader: "postcss-loader",
+  //         options: {
+  //           ident: "postcss",
+  //           plugins: [require("tailwindcss"), require("autoprefixer")],
+  //         },
+  //       },
+  //     ],
+  //     include: path.resolve(__dirname, "../"),
+  //   });
+  //   return config;
+  // },
 };
