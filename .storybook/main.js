@@ -13,6 +13,12 @@ module.exports = {
       },
     },
     {
+      name: "@storybook/addon-viewport",
+    },
+    {
+      name: "storybook-tailwind-dark-mode",
+    },
+    {
       name: "@storybook/addon-postcss",
       options: {
         postcssLoaderOptions: {

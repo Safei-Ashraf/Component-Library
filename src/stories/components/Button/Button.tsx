@@ -16,7 +16,7 @@ function Buttons({
   return (
     <button
       type="button"
-      className="bg-primary rounded-lg text-lg "
+      className="bg-primary rounded-lg text-lg border-8"
       onClick={() => console.log("clicked")}
     >
       {children}
