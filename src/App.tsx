@@ -1,5 +1,3 @@
 export function App() {
-  return (
-    <h1 className="text-3xl font-bold underline text-center ">Hello world!</h1>
-  );
+  return <h1 className="bg-primary rounded-lg text-lg  ">Hello world!</h1>;
 }

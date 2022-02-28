@@ -6,6 +6,7 @@ module.exports = {
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
   addons: [
     "@storybook/addon-links",
+
     {
       name: "@storybook/addon-essentials",
       options: {
@@ -13,8 +14,14 @@ module.exports = {
       },
     },
     {
+      name: "@storybook/addon-viewport",
+    },
+    {
       name: "@storybook/addon-postcss",
       options: {
+        cssLoaderOptions: {
+          importLoaders: 1,
+        },
         postcssLoaderOptions: {
           implementation: require("postcss"),
         },

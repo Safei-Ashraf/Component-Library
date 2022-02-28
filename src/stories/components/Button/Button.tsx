@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import "./ButtonStyle.css";
 
 interface ButtonProps {
@@ -14,8 +15,8 @@ function Buttons({
 }: ButtonProps) {
   return (
     <button
-      className={`button ${disable ? "secondary" : varient}`}
-      {...rest}
+      type="button"
+      className="bg-primary rounded-lg text-lg border-8"
       onClick={() => console.log("clicked")}
     >
       {children}
