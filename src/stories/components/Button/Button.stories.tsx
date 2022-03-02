@@ -14,7 +14,7 @@ export default {
   // in case controls not working just provide controls type
   argTypes: {
     variant: {
-      options: ["primary", "secondary"],
+      options: ["primary", "secondary", "text"],
       control: { type: "radio" },
     },
     size: {

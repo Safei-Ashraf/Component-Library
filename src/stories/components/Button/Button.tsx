@@ -6,9 +6,10 @@ interface ButtonProps {
 }
 
 const classes = {
-  button({ variant, size, disable }: ButtonProps): string | undefined {
+  button({ variant, size, disable }: ButtonProps): string {
     const ButtonDisable = disable ? "opacity-50 cursor-not-allowed" : "";
-    const Button = `rounded-xl border-solid border-2 font-sans font-normal transition delay-250 ease-linear ${ButtonDisable}`;
+    const Button = ` rounded-xl border-solid border-2 font-sans font-normal transition delay-250 ease-linear ${ButtonDisable} `;
+    const TextVariant = `${Button} border-none  text-accent`;
     const PrimaryVariant = `${Button} text-white hover:bg-primary-dark`;
     const SecondaryVariant = `${Button} text-primary hover:bg-secondary`;
     const LargeSize = `text-md px-8 py-3.5 font-bold`;
@@ -21,7 +22,10 @@ const classes = {
           return `bg-${variant} ${PrimaryVariant} ${MediumSize}`;
         }
         if (variant === "secondary") {
-          return `bg-${variant} ${SecondaryVariant} ${MediumSize}`;
+          return `bg-white ${SecondaryVariant} ${MediumSize}`;
+        }
+        if (variant === "text") {
+          return `bg-white ${TextVariant} ${MediumSize}`;
         }
         break;
 
@@ -30,7 +34,10 @@ const classes = {
           return `bg-${variant} ${PrimaryVariant} ${SmallSize}`;
         }
         if (variant === "secondary") {
-          return `bg-${variant} ${SecondaryVariant} ${SmallSize}`;
+          return `bg-white ${SecondaryVariant} ${SmallSize}`;
+        }
+        if (variant === "text") {
+          return `bg-white ${TextVariant} ${SmallSize}`;
         }
         break;
 
@@ -39,7 +46,11 @@ const classes = {
           return `bg-${variant} ${PrimaryVariant} ${LargeSize}`;
         }
         if (variant === "secondary") {
-          return `bg-${variant} ${SecondaryVariant} ${LargeSize}`;
+          return `bg-white ${SecondaryVariant} ${LargeSize}`;
+        }
+
+        if (variant === "text") {
+          return `bg-white ${TextVariant} ${LargeSize}`;
         }
         break;
     }
@@ -48,7 +59,7 @@ const classes = {
   },
 };
 
-function Buttons({ variant, size, disable, children, ...props }: ButtonProps) {
+function Buttons({ variant, size, disable, children }: ButtonProps) {
   return (
     <button
       type="button"

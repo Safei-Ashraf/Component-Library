@@ -18,10 +18,6 @@ module.exports = {
                 shd7: "#EDE8FC",
             },
 
-            secondary: {
-                DEFAULT: "#ffff",
-            },
-
             accent: {
                 DEFAULT: "#00A8E8",
                 shd1: "#0AB9FF",
