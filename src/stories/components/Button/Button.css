@@ -1,0 +1,16 @@
+.primary:hover {
+  background-color: #5f3dc4;
+}
+.primary:focus,
+.secondary:hover {
+  border: 2px solid #5034a6;
+}
+.secondary:hover {
+  background-color: #fafafc;
+}
+.text:hover {
+  color: #0092c9;
+}
+.text:focus span {
+  text-decoration: underline;
+}

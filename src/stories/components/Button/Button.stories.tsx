@@ -1,3 +1,4 @@
+/* eslint-disable react/function-component-definition */
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Button from "./Button";
 
@@ -6,12 +7,24 @@ export default {
   component: Button,
   // default args
   args: {
-    children: "Button",
+    type: "primary",
+    size: "md",
+    disabled: false,
+    text: "Click",
+    hasIcon: false,
+    iconDirection: "left",
   },
   // in case controls not working
   argTypes: {
-    varient: { control: "text" },
-    children: { control: "text" },
+    type: {
+      options: ["primary", "secondary", "text"],
+      control: { type: "radio" },
+    },
+    size: {
+      options: ["lg", "md", "sm"],
+      control: { type: "radio" },
+    },
+    disabled: { control: "boolean" },
     onClick: { action: "clicked" },
   },
 } as ComponentMeta<typeof Button>;
@@ -19,22 +32,14 @@ export default {
 // arg in story book
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const PrimaryA = Template.bind({});
+export const Primary = Template.bind({});
 
-export const SecondaryA = Template.bind({});
+export const Secondary = Template.bind({});
 
-export const SuccessA = Template.bind({});
+export const Text = Template.bind({});
 
-PrimaryA.args = {
-  varient: "primary",
-  children: "we named you fool",
-};
-
-SecondaryA.args = {
-  ...PrimaryA.args,
-  varient: "secondary",
-};
-
-SuccessA.args = {
-  varient: "success",
+Primary.args = {
+  type: "primary",
+  text: "Primary Button",
+  size: "lg",
 };
