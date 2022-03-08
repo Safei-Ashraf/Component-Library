@@ -10,6 +10,9 @@ export default {
     children: "Button Text",
     size: "medium",
     disable: false,
+    hasIcon: false,
+    leftIcon: false,
+    hasText: false,
   },
   // in case controls not working just provide controls type
   argTypes: {
