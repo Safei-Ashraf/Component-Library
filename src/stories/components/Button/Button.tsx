@@ -76,9 +76,9 @@ const classes = {
       },
     };
 
-    const btn = ButtonType[size];
+    const ButtonsType = ButtonType[size];
 
-    return btn();
+    return ButtonsType();
   },
 };
 
