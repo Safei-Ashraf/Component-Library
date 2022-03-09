@@ -18,7 +18,7 @@ export default {
 } as ComponentMeta<typeof ToggleButton>;
 
 const Template: ComponentStory<typeof ToggleButton> = (args) => (
-  <ToggleButton {...args} />;
+  <ToggleButton {...args} />
 );
 
 export const defaultSize = Template.bind({});
