@@ -1,31 +1,31 @@
 /* eslint-disable react/function-component-definition */
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Button from "./Button";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Button } from './Button';
 
 export default {
-  title: "Form/Button",
+  title: 'Form/Button',
   component: Button,
   // default args
   args: {
-    type: "primary",
-    size: "md",
+    type: 'primary',
+    size: 'md',
     disabled: false,
-    text: "Click",
+    text: 'Click',
     hasIcon: false,
-    iconDirection: "left",
+    iconDirection: 'left',
   },
   // in case controls not working
   argTypes: {
     type: {
-      options: ["primary", "secondary", "text"],
-      control: { type: "radio" },
+      options: ['primary', 'secondary', 'text'],
+      control: { type: 'radio' },
     },
     size: {
-      options: ["lg", "md", "sm"],
-      control: { type: "radio" },
+      options: ['lg', 'md', 'sm'],
+      control: { type: 'radio' },
     },
-    disabled: { control: "boolean" },
-    onClick: { action: "clicked" },
+    disabled: { control: 'boolean' },
+    onClick: { action: 'clicked' },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -39,7 +39,7 @@ export const Secondary = Template.bind({});
 export const Text = Template.bind({});
 
 Primary.args = {
-  type: "primary",
-  text: "Primary Button",
-  size: "lg",
+  type: 'primary',
+  text: 'Primary Button',
+  size: 'lg',
 };

@@ -10,7 +10,7 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-function Button({
+export const Button = ({
   type,
   size,
   disabled,
@@ -18,7 +18,7 @@ function Button({
   hasIcon,
   iconDirection,
   onClick,
-}: ButtonProps): JSX.Element {
+}: ButtonProps): JSX.Element => {
   let opacity;
   let _size;
   let _type;
@@ -89,6 +89,4 @@ function Button({
       <span className="inline-block font-medium	">{text}</span>
     </button>
   );
-}
-
-export default Button;
+};
