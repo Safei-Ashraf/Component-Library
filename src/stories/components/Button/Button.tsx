@@ -1,4 +1,4 @@
-import "./Button.css";
+import './Button.css';
 
 export interface ButtonProps {
   type: string;
@@ -28,33 +28,33 @@ function Button({
   iconOrder = `flex-row`;
 
   if (!text) {
-    text = "Click";
+    text = 'Click';
   }
 
   // size = ['lg', 'md', 'sm]:
-  if (size === "lg") _size = "px-xl py-3.5 text-md font-bold ";
-  else if (size === "md") _size = "px-l py-xs text-base font-medium";
+  if (size === 'lg') _size = 'px-xl py-3.5 text-md font-bold ';
+  else if (size === 'md') _size = 'px-l py-xs text-base font-medium';
   else {
-    _size = "px-m py-1.5 font-medium text-sm";
+    _size = 'px-m py-1.5 font-medium text-sm';
   }
 
   // type = ['primary', 'secondary', 'text']
-  if (type === "secondary") {
-    _type = "secondary bg-white text-primary border border-primary";
-  } else if (type === "text") {
-    _type = "text text-accent focus-within";
+  if (type === 'secondary') {
+    _type = 'secondary bg-white text-primary border border-primary';
+  } else if (type === 'text') {
+    _type = 'text text-accent focus-within';
   } else {
-    _type = "primary bg-primary text-white border-2 border-primary";
+    _type = 'primary bg-primary text-white border-2 border-primary';
   }
   // dsiabled?
   if (disabled) {
-    opacity = "opacity-25 cursor-not-allowed";
+    opacity = 'opacity-25 cursor-not-allowed';
   }
   if (hasIcon) {
-    iconOrder = iconDirection === "left" ? "flex-row" : "flex-row-reverse";
-    marginSetting = iconDirection === "left" ? "ml" : "mr";
+    iconOrder = iconDirection === 'left' ? 'flex-row' : 'flex-row-reverse';
+    marginSetting = iconDirection === 'left' ? 'ml' : 'mr';
     iconColor =
-      type === "text" ? "#00A8E8" : type === "secondary" ? "#7048E8" : "white";
+      type === 'text' ? '#00A8E8' : type === 'secondary' ? '#7048E8' : 'white';
   }
 
   return hasIcon ? (
