@@ -1,9 +1,3 @@
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable react/require-default-props */
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-nested-ternary */
-/* eslint-disable no-underscore-dangle */
 import "./Button.css";
 
 export interface ButtonProps {
