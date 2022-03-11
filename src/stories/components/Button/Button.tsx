@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import "./ButtonStyle.css";
 
 interface ButtonProps {
@@ -7,12 +6,12 @@ interface ButtonProps {
   children: string;
 }
 
-function Buttons({
+const Button = ({
   varient = "primary",
   children,
   disable,
   ...rest
-}: ButtonProps) {
+}: ButtonProps) => {
   return (
     <button
       type="button"
@@ -22,6 +21,6 @@ function Buttons({
       {children}
     </button>
   );
-}
+};
 
-export default Buttons;
+export default Button;
