@@ -1,4 +1,4 @@
-import './toggle.css';
+import './Toggle.css';
 
 interface ToggleProps {
   sizeSetting: string;
