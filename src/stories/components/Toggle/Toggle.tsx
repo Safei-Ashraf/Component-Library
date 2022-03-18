@@ -13,10 +13,8 @@ export const Toggle = ({
   on,
   onclick,
 }: ToggleProps): JSX.Element => {
-  let size = '1';
-  if (sizeSetting === 'sm') {
-    size = '0.666';
-  } else {
+  let size = '0.666';
+  if (sizeSetting !== 'sm') {
     size = '1';
   }
 
