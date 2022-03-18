@@ -12,7 +12,7 @@ export const Checkbox = ({ size, disabled }: CheckboxProps): JSX.Element => {
     icon: 'hidden',
     bg: 'bg-white',
   });
-  let opa = disabled ? '25' : '';
+  let opacitySetting = disabled ? '25' : '';
   const handleClick = () => {
     console.log(hideIcon);
     setHideIcon(!hideIcon);
@@ -41,7 +41,7 @@ export const Checkbox = ({ size, disabled }: CheckboxProps): JSX.Element => {
         cursor: disabled === true ? 'none' : 'auto',
         transform: `scale(${sizeSetting})`,
       }}
-      className={`border-2 border-grey-shd4 w-6 h-6  ${displayIcon.bg} relative cursor-pointer rounded-sm hover:border-grey-shd1 opacity-${opa}`}
+      className={`border-2 border-grey-shd4 w-6 h-6  ${displayIcon.bg} relative cursor-pointer rounded-sm hover:border-grey-shd1 opacity-${opacitySetting}`}
       id="box"
       onClick={handleClick}
     >
