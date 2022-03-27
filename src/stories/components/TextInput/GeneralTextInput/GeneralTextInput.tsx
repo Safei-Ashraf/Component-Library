@@ -1,4 +1,4 @@
-const GeneralTextInput = ({ onChange }: any) => {
+export const GeneralTextInput = ({ onChange }: any) => {
   return (
     <div className="inline-block w-full" onChange={onChange}>
       <label htmlFor="text-general"></label>
@@ -12,5 +12,3 @@ const GeneralTextInput = ({ onChange }: any) => {
     </div>
   );
 };
-
-export default GeneralTextInput;
