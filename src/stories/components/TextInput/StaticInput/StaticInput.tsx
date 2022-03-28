@@ -32,7 +32,6 @@ export const StaticInput = ({
     iconDisplay = <CorrectIcon />;
   }
   let opacity = disabled ? 'opacity-50' : '';
-  let disablCheck = disabled ? 'none' : '';
   //const homeDisplay = <HomeIcon className="pl-1 pr-1 pt-2.5 inline-block" />;
   const homeDisplay = icon === 'home' ? <HomeIcon /> : '';
   if (prefix !== 'none') {
@@ -40,7 +39,7 @@ export const StaticInput = ({
       <>
         <div
           style={{
-            pointerEvents: `${disablCheck}`,
+            cursor: disabled === true ? 'none' : 'auto',
           }}
           className={`${statusStyle} rounded-md  w-64 flex ${direction} items-start content-center px-1 ${opacity} bg-white label-container hover:border-grey-shd1 focus-within:border-opacity-100 `}
         >
@@ -66,7 +65,7 @@ export const StaticInput = ({
       <>
         <div
           style={{
-            pointerEvents: `${disablCheck}`,
+            cursor: disabled === true ? 'none' : 'auto',
           }}
           className={`${statusStyle} rounded-md  w-64 flex ${direction} items-start content-center px-1 ${opacity} bg-white label-container hover:border-grey-shd1 focus-within:border-opacity-100 `}
         >
