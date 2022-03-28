@@ -5,7 +5,7 @@ export default {
   title: 'Atoms/StaticInput',
   component: StaticInput,
   argTypes: {
-    status: { control: 'radio', options: ['normal', 'error', 'sucess'] },
+    status: { control: 'radio', options: ['normal', 'error', 'success'] },
     icon: { control: 'radio', options: ['none', 'home'] },
     direction: { control: 'radio', options: ['flex-row', 'flex-row-reverse'] },
   },
