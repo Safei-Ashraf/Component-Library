@@ -2,9 +2,9 @@ import './Toggle.css';
 
 interface ToggleProps {
   sizeSetting: string;
-  disabled: boolean;
-  on: boolean;
-  onclick: () => void;
+  disabled?: boolean;
+  on?: boolean;
+  onclick?: () => void;
 }
 
 export const Toggle = ({
